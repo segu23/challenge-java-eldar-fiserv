@@ -7,7 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="sistema-tarjetas-credito" />
-        <module name="join-uppercase-array" />
+        <module name="join-lowercase-array" />
       </profile>
     </annotationProcessing>
   </component>
