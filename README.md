@@ -17,7 +17,16 @@ Para verificar si una tarjeta era igual a otra hice un override del método equa
 
 ## Ejercicio 2
 Para este ejercicio no tengo mucho que comentar, simplemente cree un endpoint el cual recibe peticiones POST, cree dos objetos, uno de request y otro de response los cuales tienen en sus variables los datos a recibir y datos a enviar.
-Por otro lado hice un manejo global de las exceptions para poder actuar de una manera más homogénea en cuanto al envío de errores.
+Por otro lado hice un manejo global de las exceptions para poder actuar de una manera más homogénea en cuanto al envío de errores.\
+**URL & Endpoint**: http://54.39.131.59:25579/fee/transaction-fee \
+**Tipo de petición**: POST \
+**Ejemplo de body a enviar**:
+```json
+{
+    "cardBrandName": "AMEX",
+    "moneyAmount": 5525.25
+}
+```
 
 ## Ejercicio 3
 Sin conocimientos previos en PL/SQL, a primera vista pareciera que esa consulta hará algo con un límite de 10, pero luego de investigar un poco, la cláusula BULK COLLECT es utilizada para la mejora en el rendimiento de peticiones a grandes porciones de datos, en este caso limitando estas porciones a 10 filas, por lo que al final lo hará con el total de los registros (107 en este caso), distribuidos en bloques de 10 registros, 11 porciones en total, y mejorando de esta manera la utilización de memoria.
